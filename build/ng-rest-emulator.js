@@ -34,15 +34,25 @@
             return mocks[url] && mocks[url][method] ? mocks[url][method] : false;
         }
 
-        function listPreset(){
+        function listPreset() {
             return mocks;
+        }
+
+        function clearPreset(url, method) {
+            method = method || 'GET';
+            if (mocks[url] && mocks[url][method]) {
+                delete mocks[url][method];
+                return true
+            }
+            return false;
         }
 
         function get($window) {
             var $get = {
                 set: setPreset,
                 get: getPreset,
-                list: listPreset
+                list: listPreset,
+                clear: clearPreset
             };
             $window.restEmulator = $get;
             return $get;
@@ -81,6 +91,7 @@
             return config;
         }
     }
+
     restEmulatorHttpInterceptor.$inject = ['$restEmulatorConfig'];
 })();
 
@@ -96,5 +107,6 @@
             .interceptors
             .push('restEmulatorHttpInterceptor');
     }
+
     config.$inject = ['$httpProvider'];
 })();
