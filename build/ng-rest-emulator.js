@@ -91,7 +91,6 @@
             return config;
         }
     }
-
     restEmulatorHttpInterceptor.$inject = ['$restEmulatorConfig'];
 })();
 
@@ -107,6 +106,5 @@
             .interceptors
             .push('restEmulatorHttpInterceptor');
     }
-
     config.$inject = ['$httpProvider'];
 })();
