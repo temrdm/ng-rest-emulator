@@ -1,0 +1,30 @@
+{
+  "name": "ng-rest-emulator",
+  "version": "0.0.1",
+  "description": "Angular module selected mock for rest-emulator",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/temrdm/ng-rest-emulator.git"
+  },
+  "keywords": [
+    "rest-emulator"
+  ],
+  "author": "Artem Pogrebnoy <tem.rdm@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/temrdm/ng-rest-emulator/issues"
+  },
+  "homepage": "https://github.com/temrdm/ng-rest-emulator",
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "gulp-angular-filesort": "^1.0.4",
+    "gulp-concat": "^2.4.3",
+    "gulp-load-plugins": "^0.8.0",
+    "gulp-ng-annotate": "^0.5.2",
+    "gulp-uglify": "^1.1.0"
+  }
+}

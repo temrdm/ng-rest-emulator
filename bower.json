@@ -1,0 +1,22 @@
+{
+  "name": "ng-rest-emulator",
+  "version": "0.0.1",
+  "homepage": "https://github.com/temrdm/ng-rest-emulator",
+  "authors": [
+    "tem.rdm <tem.rdm@gmail.com>"
+  ],
+  "description": "Angular module selected mock for rest-emulator",
+  "main": "./build/ng-rest-emulator.js",
+  "keywords": [
+    "rest-emulator",
+    "AngularJS"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
