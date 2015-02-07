@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Gulp Rest Emulator</title>
+    <link rel="stylesheet" href="/public/vendors/bootstrap/dist/css/bootstrap.min.css"/>
+    <script src="/public/vendors/angular/angular.min.js"></script>
+    <script src="/public/vendors/ng-rest-emulator/build/ng-rest-emulator.min.js"></script>
+</head>
+<body ng-app="App" ng-controller="AppController as vm">
+
+<div class="container">
+    <div class="jumbotron">
+        <h1>ng-rest-emulator</h1>
+
+        <p>
+            Angular module for change preset using rest-emulator and gulp plugin.
+        </p>
+
+        <p>
+            Open DevTools console, and set mock preset using restEmulator.set().
+            Then click "Update" button. For example:
+        </p>
+
+        <p>
+            <pre>
+                restEmulator.set('/api/v1/users', 'default');
+            </pre>
+        </p>
+
+        <p>
+            Available methods:
+
+            <pre>
+                restEmulator.set(url, preset, [method]);
+
+                restEmulator.get(url, [method]);
+
+                restEmulator.clear(url, [method]);
+
+                restEmulator.list();
+            </pre>
+        </p>
+
+        <p>
+            <button class="btn btn-lg btn-success" ng-click="vm.update()">Update</button>
+        </p>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h4>Users</h4>
+
+            <table class="table">
+                <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>Username</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="user in vm.users"
+                    ng-if="vm.users.length">
+                    <td ng-bind="::user.name"></td>
+                    <td ng-bind="::user.username"></td>
+                </tr>
+                <tr ng-if="!vm.users.length">
+                    <td colspan="2">Users not found.</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h4>Cities</h4>
+
+            <table class="table">
+                <thead>
+                <tr>
+                    <td>City</td>
+                    <td>Code</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="city in vm.cities"
+                    ng-if="vm.cities.length">
+                    <td ng-bind="::city.name"></td>
+                    <td ng-bind="::city.code"></td>
+                </tr>
+                <tr ng-if="!vm.cities.length">
+                    <td colspan="2">Cities not found.</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h4>Regions</h4>
+
+            <table class="table">
+                <thead>
+                <tr>
+                    <td>Region</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="region in vm.regions"
+                    ng-if="vm.regions.length">
+                    <td ng-bind="::region.name"></td>
+                </tr>
+                <tr ng-if="!vm.regions.length">
+                    <td>Regions not found.</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="/public/app/module.js"></script>
+<script src="/public/app/config.js"></script>
+<script src="/public/app/controller.js"></script>
+</body>
+</html>

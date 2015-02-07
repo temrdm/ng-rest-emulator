@@ -5,7 +5,7 @@
   "authors": [
     "tem.rdm <tem.rdm@gmail.com>"
   ],
-  "description": "Angular module selected mock for rest-emulator",
+  "description": "Angular module for temrdm/rest-emulator ",
   "main": "./build/ng-rest-emulator.js",
   "keywords": [
     "rest-emulator",
@@ -16,6 +16,8 @@
     "**/.*",
     "node_modules",
     "bower_components",
+    "vendors",
+    "example",
     "test",
     "tests"
   ]

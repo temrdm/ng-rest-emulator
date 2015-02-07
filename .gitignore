@@ -1,6 +1,7 @@
 .idea/
 *.iml
 node_modules/
+vendors/
 npm-debug.log
 .coverdata
 .coverrun
