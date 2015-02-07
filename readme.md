@@ -1,6 +1,10 @@
 ng-rest-emulator
 ===========
 
+# Dependency
+
+Use ngRestEmulator with [gulp-rest-emulator](https://github.com/temrdm/gulp-rest-emulator) plugin.
+
 # Installation
 
     bower install --save ng-rest-emulator
